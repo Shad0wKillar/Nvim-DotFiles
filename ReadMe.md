@@ -5,3 +5,9 @@ If you want to build this from skratch, go [Josean Blog](https://bit.ly/4agkTyQ)
 Todos:
 
 1. I have to add debugging capabilities. They have not been added yet.
+
+Remember:
+
+1. For Transpiracy to take affect, make sure:
+   - picom is installed
+   - ~/.config/picom.conf has give opacity to your terminal
