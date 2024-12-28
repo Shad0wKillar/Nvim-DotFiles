@@ -30,3 +30,14 @@ keymap.set("n", "<leader>tx", "<cmd>tabclose<CR>", { desc = "Close current tab" 
 keymap.set("n", "<leader>tn", "<cmd>tabn<CR>", { desc = "Go to next tab" }) --  go to next tab
 keymap.set("n", "<leader>tp", "<cmd>tabp<CR>", { desc = "Go to previous tab" }) --  go to previous tab
 keymap.set("n", "<leader>tf", "<cmd>tabnew %<CR>", { desc = "Open current buffer in new tab" }) --  move current buffer to new tab
+
+-- GitHub Copilot
+-- Map <C-n> to Copilot suggestion accept
+-- For this to work, make sure <C-n> is not mapped
+-- to any other command. Currently is it mapped
+-- to accept completion from insert mode.
+-- vim.keymap.set("i", "<C-]>", 'copilot#Accept("\\<CR>")', {
+-- 	expr = true,
+-- 	replace_keycodes = false,
+-- })
+-- vim.g.copilot_no_tab_map = false -- Disable default <Tab> mapping
