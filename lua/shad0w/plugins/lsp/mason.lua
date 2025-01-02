@@ -76,6 +76,7 @@ return {
 				"markdownlint-cli2",
 				"hadolint",
 				"eslint_d",
+				"eslint",
 				"pylint",
 			},
 		})
