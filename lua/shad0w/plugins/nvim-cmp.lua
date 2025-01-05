@@ -47,6 +47,9 @@ return {
 				["<C-Space>"] = cmp.mapping.complete(), -- show completion suggestions
 				["<C-e>"] = cmp.mapping.abort(), -- close completion window
 				["<CR>"] = cmp.mapping.confirm({ select = false }),
+				["<C-n>"] = cmp.mapping(function(fallback)
+					fallback()
+				end, { "i", "s" }),
 			}),
 			-- sources for autocompletion
 			sources = cmp.config.sources({

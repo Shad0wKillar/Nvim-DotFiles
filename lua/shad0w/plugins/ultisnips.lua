@@ -7,8 +7,8 @@ return {
 		config = function()
 			-- Configure UltiSnips
 			vim.g.UltiSnipsExpandTrigger = "<C-p>"
-			vim.g.UltiSnipsJumpForwardTrigger = "<C-j>"
-			vim.g.UltiSnipsJumpBackwardTrigger = "<C-k>"
+			vim.g.UltiSnipsJumpForwardTrigger = "<C-l>"
+			vim.g.UltiSnipsJumpBackwardTrigger = "<C-h>"
 			vim.g.UltiSnipsSnippetDirectories = { "UltiSnips", "mysnippets" } -- Custom snippet directories
 		end,
 	},
