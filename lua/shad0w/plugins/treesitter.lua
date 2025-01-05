@@ -60,6 +60,7 @@ return {
 			close_on_slash = false, -- Auto close on trailing </
 			filetypes = {
 				html = {
+
 					close = false, -- Disable auto close tags for HTML specifically
 				},
 			},
