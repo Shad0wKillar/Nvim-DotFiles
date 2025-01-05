@@ -41,3 +41,14 @@ keymap.set("n", "<leader>tf", "<cmd>tabnew %<CR>", { desc = "Open current buffer
 -- 	replace_keycodes = false,
 -- })
 -- vim.g.copilot_no_tab_map = false -- Disable default <Tab> mapping
+
+-- Ultisnips
+-- UltiSnips key bindings
+vim.api.nvim_set_keymap(
+	"i",
+	"<Tab>",
+	'UltiSnips#ExpandSnippetOrJump() ? "<Plug>(ultisnips_expand_or_jump)" : "<Tab>"',
+	{ expr = true, noremap = true }
+)
+vim.api.nvim_set_keymap("s", "<Tab>", "<Plug>(ultisnips_jump_forward)", {})
+vim.api.nvim_set_keymap("s", "<S-Tab>", "<Plug>(ultisnips_jump_backward)", {})

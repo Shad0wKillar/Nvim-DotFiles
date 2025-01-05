@@ -44,3 +44,5 @@ opt.splitbelow = true -- split horizontal window to the bottom
 -- turn off swapfile
 opt.swapfile = false
 
+-- set python3 host prog for neovim
+vim.g.python3_host_prog = "/mnt/home/shad0wkillar/.config/nvim/myvenv/bin/python"
