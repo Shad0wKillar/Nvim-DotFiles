@@ -1,8 +1,8 @@
 return {
 	"williamboman/mason.nvim",
 	dependencies = {
-		"williamboman/mason-lspconfig.nvim",
 		"WhoIsSethDaniel/mason-tool-installer.nvim",
+		"williamboman/mason-lspconfig.nvim",
 	},
 	config = function()
 		-- import mason
@@ -12,6 +12,7 @@ return {
 		local mason_lspconfig = require("mason-lspconfig")
 
 		local mason_tool_installer = require("mason-tool-installer")
+
 		-- enable mason and configure icons
 		mason.setup({
 			ui = {
@@ -44,6 +45,7 @@ return {
 				"vimls",
 				"dockerls",
 				"lua_ls",
+				-- "tsserver",
 			},
 		})
 
@@ -56,13 +58,11 @@ return {
 				"php-cs-fixer",
 				"sql-formatter",
 				"markdownlint",
-				"prettier", -- prettier formatter
-				"stylua", -- lua formatter
-				"isort", -- python formatter
-				"black", -- python formatter
-
-				-- formatters below
-				-- "shellcheck", -- install it manually using :Mason command -> Going into linter by pressing 4 -> searching for shellcheck using /shellcheck -> press "i" to install is manually
+				"prettier",
+				"stylua",
+				"isort",
+				"black",
+				-- "shellcheck", type :Mason , press "4" and then search and install shellcheck
 				"cpplint",
 				"cmakelint",
 				"stylelint",

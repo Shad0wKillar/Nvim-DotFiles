@@ -11,8 +11,8 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-require("lazy").setup({ { import = "shad0w.plugins", }, { import = "shad0w.plugins.lsp" } }, {
-    checker = {
+require("lazy").setup({ { import = "shad0w.plugins" }, { import = "shad0w.plugins.lsp" } }, {
+  checker = {
     enabled = true,
     notify = false,
   },
@@ -20,5 +20,3 @@ require("lazy").setup({ { import = "shad0w.plugins", }, { import = "shad0w.plugi
     notify = false,
   },
 })
-
-require("lazy").setup("shad0w.plugins")

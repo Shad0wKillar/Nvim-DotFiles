@@ -31,24 +31,5 @@ keymap.set("n", "<leader>tn", "<cmd>tabn<CR>", { desc = "Go to next tab" }) --  
 keymap.set("n", "<leader>tp", "<cmd>tabp<CR>", { desc = "Go to previous tab" }) --  go to previous tab
 keymap.set("n", "<leader>tf", "<cmd>tabnew %<CR>", { desc = "Open current buffer in new tab" }) --  move current buffer to new tab
 
--- GitHub Copilot
--- Map <C-n> to Copilot suggestion accept
--- For this to work, make sure <C-n> is not mapped
--- to any other command. Currently is it mapped
--- to accept completion from insert mode.
--- vim.keymap.set("i", "<C-]>", 'copilot#Accept("\\<CR>")', {
--- 	expr = true,
--- 	replace_keycodes = false,
--- })
--- vim.g.copilot_no_tab_map = false -- Disable default <Tab> mapping
-
--- Ultisnips
--- UltiSnips key bindings
-vim.api.nvim_set_keymap(
-	"i",
-	"<Tab>",
-	'UltiSnips#ExpandSnippetOrJump() ? "<Plug>(ultisnips_expand_or_jump)" : "<Tab>"',
-	{ expr = true, noremap = true }
-)
-vim.api.nvim_set_keymap("s", "<Tab>", "<Plug>(ultisnips_jump_forward)", {})
-vim.api.nvim_set_keymap("s", "<S-Tab>", "<Plug>(ultisnips_jump_backward)", {})
+-- pressing <C-BS> in insert mode will delete the previous word
+keymap.set("i", "<C-BS>", "<C-w>", { desc = "Delete previous word" })
