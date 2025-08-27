@@ -5,15 +5,10 @@ return {
 		"williamboman/mason-lspconfig.nvim",
 	},
 	config = function()
-		-- import mason
 		local mason = require("mason")
-
-		-- import mason-lspconfig
 		local mason_lspconfig = require("mason-lspconfig")
-
 		local mason_tool_installer = require("mason-tool-installer")
 
-		-- enable mason and configure icons
 		mason.setup({
 			ui = {
 				icons = {
@@ -25,7 +20,7 @@ return {
 		})
 
 		mason_lspconfig.setup({
-			-- list of servers for mason to install
+			-- This list is now the COMBINED list from both files
 			ensure_installed = {
 				"bashls",
 				"clangd",
@@ -45,11 +40,15 @@ return {
 				"vimls",
 				"dockerls",
 				"lua_ls",
-				-- "tsserver",
+				-- Added from your other file
+				"svelte",
+				"graphql",
+				"emmet_ls",
 			},
 		})
 
 		mason_tool_installer.setup({
+			-- This is the list of your formatters and linters
 			ensure_installed = {
 				"shfmt",
 				"clang-format",
@@ -62,7 +61,6 @@ return {
 				"stylua",
 				"isort",
 				"black",
-				-- "shellcheck", type :Mason , press "4" and then search and install shellcheck
 				"cpplint",
 				"cmakelint",
 				"stylelint",
@@ -76,7 +74,6 @@ return {
 				"markdownlint-cli2",
 				"hadolint",
 				"eslint_d",
-				"eslint",
 				"pylint",
 			},
 		})
